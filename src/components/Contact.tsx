@@ -85,7 +85,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             I'm always open to discussing new opportunities, collaborations, or
             cybersecurity projects. Feel free to reach out!
           </p>
@@ -106,7 +106,7 @@ const Contact = () => {
                     <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base lg:text-lg">
+                    <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-sm lg:text-base">
                       {info.title}
                     </h3>
                     {info.href ? (
@@ -119,7 +119,7 @@ const Contact = () => {
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg">
+                      <p className="text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base">
                         {info.value}
                       </p>
                     )}
@@ -142,7 +142,7 @@ const Contact = () => {
                 <div key={field}>
                   <Label
                     htmlFor={field}
-                    className="text-foreground text-xs sm:text-sm md:text-base lg:text-lg "
+                    className="text-foreground text-xs sm:text-sm md:text-sm lg:text-base "
                   >
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </Label>
@@ -151,7 +151,7 @@ const Contact = () => {
                     type={field === "email" ? "email" : "text"}
                     placeholder={`Your ${field}`}
                     {...register(field as keyof ContactFormData)}
-                    className="mt-1.5 ttext-xs sm:text-sm md:text-base lg:text-lg "
+                    className="mt-1.5 ttext-xs sm:text-sm md:text-sm lg:text-base "
                   />
                   {errors[field as keyof ContactFormData] && (
                     <p className="text-destructive text-xs sm:text-sm mt-1">
@@ -163,7 +163,7 @@ const Contact = () => {
               <div>
                 <Label
                   htmlFor="message"
-                  className="text-foreground text-xs sm:text-sm md:text-base lg:text-lg "
+                  className="text-foreground text-xs sm:text-sm md:text-sm lg:text-base "
                 >
                   Message
                 </Label>
@@ -172,7 +172,7 @@ const Contact = () => {
                   placeholder="Your message..."
                   rows={5}
                   {...register("message")}
-                  className="mt-1.5 text-xs sm:text-sm md:text-base lg:text-lg "
+                  className="mt-1.5 text-xs sm:text-sm md:text-sm lg:text-base "
                 />
                 {errors.message && (
                   <p className="text-destructive text-xs sm:text-sm mt-1">

@@ -128,7 +128,7 @@ const ExpertiseAndCredentials = () => {
         Expertise & Credentials
       </h2>
       <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-      <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-sm sm:text-base md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
         A curated view of technical skills, hands-on experience, and
         verified certifications across cybersecurity, development, and
         applied research.
@@ -158,16 +158,16 @@ const ExpertiseAndCredentials = () => {
                   </h3>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap mb-3">
-                  <span className="text-accent font-semibold text-xs sm:text-sm md:text-base lg:text-lg">
+                  <span className="text-accent font-semibold text-xs sm:text-sm md:text-sm lg:text-base">
                     {cert.issuer}
                   </span>
                   {cert.provider && (
-                    <span className="bg-muted text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg px-2 py-0.5 rounded-full">
+                    <span className="bg-muted text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base px-2 py-0.5 rounded-full">
                       Offered by {cert.provider}
                     </span>
                   )}
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4">
+                <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed mb-4">
                   {cert.description}
                 </p>
 
@@ -175,7 +175,7 @@ const ExpertiseAndCredentials = () => {
                   <div className="mb-4">
                     {expanded === index && (
                       <div>
-                        <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
+                        <h4 className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Courses:
                         </h4>
                         <ol className="list-decimal list-inside text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground space-y-1 mb-3">
