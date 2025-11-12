@@ -57,7 +57,7 @@ const EducationAndResearch = () => {
       <div className="max-w-8xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
             Education & Research
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
@@ -76,7 +76,7 @@ const EducationAndResearch = () => {
                 <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <GraduationCap className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-2xl sm:text-3xl md:text-3xl font-semibold text-foreground">
+                <CardTitle className="text-2xl sm:text-2xl md:text-2xl font-semibold text-foreground">
                   Education
                 </CardTitle>
               </div>
@@ -85,7 +85,7 @@ const EducationAndResearch = () => {
             <CardContent className="p-0 space-y-6">
               {educationList.map((edu, idx) => (
                 <div key={idx} className="pl-4 border-l-2 border-accent/50">
-                  <h3 className="text-lg sm:text-xl md:text-xl font-semibold text-foreground mb-1">
+                  <h3 className="text-lg sm:text-l md:text-l font-semibold text-foreground mb-1">
                     {edu.degree}
                   </h3>
                   <p className="text-accent text-sm sm:text-base md:text-base font-medium mb-2">
@@ -119,7 +119,7 @@ const EducationAndResearch = () => {
                 <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <FileText className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-2xl sm:text-3xl md:text-3xl font-semibold text-foreground">
+                <CardTitle className="text-2xl sm:text-2xl md:text-2xl font-semibold text-foreground">
                   Research Publication
                 </CardTitle>
               </div>
@@ -172,22 +172,23 @@ const EducationAndResearch = () => {
                     </div>
                   </div>
 
-                  <div className="mt-4 text-center">
-                    <a
-                      href={paper.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="text-sm sm:text-base"
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4 sm:h-4 sm:w-4" />
-                        View Publication
-                      </Button>
-                    </a>
-                  </div>
+<div className="mt-4 text-center">
+  <a
+    href={paper.url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      variant="outline"
+      size="sm"
+      className="text-xs sm:text-sm flex items-center gap-1"
+    >
+      <ExternalLink className="mr-1.5 h-3 w-3" />
+      View Publication
+    </Button>
+  </a>
+</div>
+
                 </div>
               ))}
             </CardContent>

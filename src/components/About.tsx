@@ -29,7 +29,7 @@ const About = () => {
       <div className="max-w-8xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16 sm:mb-20 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
             About Me
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
@@ -73,7 +73,7 @@ const About = () => {
               >
                 {/* Card header: icon + title */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="p-2 sm:p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="p-2 sm:p-2 bg-gradient-accent rounded-xl inline-flex items-center justify-center group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-base sm:text-xl font-semibold text-foreground">
