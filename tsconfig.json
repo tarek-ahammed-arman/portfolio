@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "noImplicitAny": true,           // catch unintended 'any'
+    "noUnusedParameters": true,      // catch unused function params
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": true,          // catch unused variables
+    "strictNullChecks": true         // catch null/undefined errors
+  }
+}

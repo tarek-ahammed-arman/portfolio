@@ -1,0 +1,12 @@
+# robots.txt for Tarek Ahammed Arman Portfolio
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of unnecessary files
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://www.tarekahammedarman.com/sitemap.xml
