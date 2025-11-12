@@ -12,12 +12,16 @@ import { Button } from "@/components/ui/button";
 
 // Expertise & Credentials section – showcases skills and verified certifications
 const ExpertiseAndCredentials = () => {
+  // Track which certification is expanded (for showing sub-courses)
   const [expanded, setExpanded] = useState<number | null>(null);
+  // Control how many certificates are visible at once
   const [visibleCount, setVisibleCount] = useState(4);
 
+  // Toggle expanded certificate details
   const toggleExpand = (index: number) =>
     setExpanded(expanded === index ? null : index);
 
+  // Show more / less certificates
   const handleViewMore = () => setVisibleCount((prev) => prev + 4);
   const handleViewLess = () => {
     setVisibleCount(4);
@@ -25,6 +29,7 @@ const ExpertiseAndCredentials = () => {
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Skill categories displayed with icons and lists
   const skillCategories = [
     {
       title: "Cybersecurity & Offensive Security",
@@ -59,6 +64,7 @@ const ExpertiseAndCredentials = () => {
     },
   ];
 
+  // Certification list with optional sub-courses and external links
   const certifications = [
     {
       title: "Google Cybersecurity Professional Certificate",
@@ -117,164 +123,169 @@ const ExpertiseAndCredentials = () => {
   ];
 
   return (
-<section
-  id="expertise"
-  className="py-24 px-4 sm:px-6 lg:px-12 bg-background"
->
-  <div className="max-w-8xl mx-auto">
-    {/* Section header */}
-    <div className="text-center mb-20 animate-fade-up">
-      <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
-        Expertise & Credentials
-      </h2>
-      <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-      <p className="text-sm sm:text-base md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
-        A curated view of technical skills, hands-on experience, and
-        verified certifications across cybersecurity, development, and
-        applied research.
-      </p>
-    </div>
+    <section
+      id="expertise"
+      className="py-24 px-4 sm:px-6 lg:px-12 bg-background"
+    >
+      <div className="max-w-8xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-20 animate-fade-up">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
+            Expertise & Credentials
+          </h2>
+          <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+          <p className="text-sm sm:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+            A curated view of technical skills, hands-on experience, and
+            verified certifications across cybersecurity, development, and
+            applied research.
+          </p>
+        </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
-      {/* Certifications list */}
-      <div className="lg:col-span-2 animate-fade-up">
-        <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6">
-          Certifications
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {certifications.slice(0, visibleCount).map((cert, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-2xl shadow-card hover:shadow-hover transition-all border border-border p-6 sm:p-8 flex flex-col justify-between animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div>
-                <div className="flex items-center gap-3 sm:gap-4 mb-4">
-                  <div className="p-2 sm:p-2 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
-                    <Award className="h-4 w-4 sm:h-5 sm:w-5 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-lg sm:text-lg md:text-lg font-semibold text-foreground">
-                    {cert.title}
-                  </h3>
-                </div>
-                <div className="flex items-center gap-2 flex-wrap mb-3">
-                  <span className="text-accent font-semibold text-xs sm:text-sm md:text-sm lg:text-base">
-                    {cert.issuer}
-                  </span>
-                  {cert.provider && (
-                    <span className="bg-muted text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base px-2 py-0.5 rounded-full">
-                      Offered by {cert.provider}
-                    </span>
-                  )}
-                </div>
-                <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed mb-4">
-                  {cert.description}
-                </p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+          {/* Certifications list */}
+          <div className="lg:col-span-2 animate-fade-up">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6">
+              Certifications
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {certifications.slice(0, visibleCount).map((cert, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-2xl shadow-card hover:shadow-hover transition-all border border-border p-6 sm:p-8 flex flex-col justify-between animate-fade-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {/* Certificate header & description */}
+                  <div>
+                    <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                      <div className="p-2 sm:p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
+                        <Award className="h-5 sm:h-7 w-5 sm:w-7 text-accent-foreground" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {cert.title}
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap mb-3">
+                      <span className="text-accent font-semibold text-sm sm:text-base">
+                        {cert.issuer}
+                      </span>
+                      {cert.provider && (
+                        <span className="bg-muted text-muted-foreground text-xs sm:text-sm px-2 py-0.5 rounded-full">
+                          Offered by {cert.provider}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {cert.description}
+                    </p>
 
-                {cert.subCourses && (
-                  <div className="mb-4">
-                    {expanded === index && (
-                      <div>
-                        <h4 className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
-                          Courses:
-                        </h4>
-                        <ol className="list-decimal list-inside text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground space-y-1 mb-3">
-                          {cert.subCourses.map((course, i) => (
-                            <li key={i}>{course}</li>
-                          ))}
-                        </ol>
+                    {/* Expandable list of sub-courses */}
+                    {cert.subCourses && (
+                      <div className="mb-4">
+                        {expanded === index && (
+                          <div>
+                            <h4 className="text-sm font-semibold text-foreground mb-2">
+                              Courses:
+                            </h4>
+                            <ol className="list-decimal list-inside text-sm text-muted-foreground space-y-1 mb-3">
+                              {cert.subCourses.map((course, i) => (
+                                <li key={i}>{course}</li>
+                              ))}
+                            </ol>
+                          </div>
+                        )}
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => toggleExpand(index)}
+                          className="flex items-center gap-1 text-sm"
+                        >
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform ${
+                              expanded === index ? "rotate-180" : ""
+                            }`}
+                          />
+                          {expanded === index ? "Show Less" : "View Courses"}
+                        </Button>
                       </div>
                     )}
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => toggleExpand(index)}
-                      className="flex items-center gap-1 text-xs sm:text-sm"
-                    >
-                      <ChevronDown
-                        className={`h-3 w-3 transition-transform ${
-                          expanded === index ? "rotate-180" : ""
-                        }`}
-                      />
-                      {expanded === index ? "Show Less" : "View Courses"}
-                    </Button>
                   </div>
-                )}
-              </div>
 
-              <div className="mt-4 text-center">
-                <a
-                  href={cert.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-1 text-xs sm:text-sm"
-                  >
-                    <ExternalLink className="mr-1.5 h-3 w-3" />
-                    View Certificate
-                  </Button>
-                </a>
-              </div>
+                  {/* External certificate link */}
+                  <div className="mt-4 text-center">
+                    <a
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex items-center gap-1 text-sm"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        View Certificate
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <div className="flex justify-center mt-6 gap-4">
-          {visibleCount < certifications.length && (
-            <Button size="sm" className="text-xs sm:text-xs" onClick={handleViewMore}>
-              View More
-            </Button>
-          )}
-          {visibleCount > 4 && (
-            <Button size="sm" variant="outline" className="text-xs sm:text-xs" onClick={handleViewLess}>
-              View Less
-            </Button>
-          )}
-        </div>
-      </div>
+            {/* Show More / Show Less controls */}
+            <div className="flex justify-center mt-6 gap-4">
+              {visibleCount < certifications.length && (
+                <Button onClick={handleViewMore}>View More</Button>
+              )}
+              {visibleCount > 4 && (
+                <Button onClick={handleViewLess} variant="outline">
+                  View Less
+                </Button>
+              )}
+            </div>
+          </div>
 
-      {/* Technical skills panel */}
-      <div className="animate-fade-up">
-        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-6">
-          Technical Skills
-        </h3>
-        <div className="bg-card rounded-2xl shadow-card border border-border p-6 sm:p-8 space-y-6 w-full">
-          {skillCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <div key={index}>
-                <div className="flex items-center gap-2 sm:gap-3 mb-3">
-                  <div className="p-2 sm:p-2 bg-gradient-accent rounded-full inline-flex items-center justify-center">
-                    <Icon className="h-3 sm:h-4 w-3 sm:w-4 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground">
-                    {category.title}
-                  </h4>
-                </div>
-                <div className="space-y-2">
-                  {category.skills.map((skill, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-2 text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed"
-                    >
-                      <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
-                      <p className="m-0">{skill}</p>
+          {/* Technical skills panel */}
+          <div className="animate-fade-up">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6">
+              Technical Skills
+            </h3>
+            <div className="bg-card rounded-2xl shadow-card border border-border p-6 md:p-8 space-y-6 h-full">
+              {skillCategories.map((category, index) => {
+                const Icon = category.icon;
+                return (
+                  <div key={index}>
+                    {/* Skill category header */}
+                    <div className="flex items-center gap-2 sm:gap-3 mb-3">
+                      <div className="p-1 sm:p-2 bg-gradient-accent rounded-full inline-flex items-center justify-center">
+                        <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
+                      </div>
+                      <h4 className="text-base font-semibold text-foreground">
+                        {category.title}
+                      </h4>
                     </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+                    {/* Skill list */}
+                    <div className="space-y-2">
+                      {category.skills.map((skill, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed"
+                        >
+                          <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
+                          <p className="m-0">{skill}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
   );
 };
 
 export default ExpertiseAndCredentials;
+
+
