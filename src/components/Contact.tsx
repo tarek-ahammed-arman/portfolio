@@ -151,7 +151,7 @@ const Contact = () => {
                     type={field === "email" ? "email" : "text"}
                     placeholder={`Your ${field}`}
                     {...register(field as keyof ContactFormData)}
-                    className="mt-1.5 ttext-xs sm:text-sm md:text-sm lg:text-sm "
+                    className="mt-1.5 text-xs sm:text-sm md:text-sm lg:text-sm "
                   />
                   {errors[field as keyof ContactFormData] && (
                     <p className="text-destructive text-xs sm:text-sm mt-1">

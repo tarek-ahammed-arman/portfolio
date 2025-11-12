@@ -132,8 +132,10 @@ const EducationAndResearch = () => {
                   className="bg-card/30 rounded-2xl border border-border p-6 sm:p-8 flex flex-col justify-between animate-fade-up"
                 >
                   <div className="flex flex-col flex-1">
-                    <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-accent flex-shrink-0 self-start" />
+                    <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                      <div className="flex-shrink-0 mt-1 sm:mt-0">
+                        <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-accent" />
+                      </div>
                       <h3 className="text-base sm:text-lg md:text-lg font-semibold text-foreground mb-1">
                         {paper.title}
                       </h3>
@@ -164,7 +166,7 @@ const EducationAndResearch = () => {
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent ttext-xs sm:text-sm md:text-sm lg:text-base font-medium"
+                          className="px-3 py-1 text-accent text-xs sm:text-sm md:text-sm lg:text-base font-medium"
                         >
                           {tag}
                         </span>
@@ -172,23 +174,22 @@ const EducationAndResearch = () => {
                     </div>
                   </div>
 
-<div className="mt-4 text-center">
-  <a
-    href={paper.url}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      variant="outline"
-      size="sm"
-      className="text-xs sm:text-xs flex items-center gap-1"
-    >
-      <ExternalLink className="mr-1.5 h-2 w-2" />
-      View Publication
-    </Button>
-  </a>
-</div>
-
+                  <div className="mt-4 text-center">
+                    <a
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="text-xs sm:text-xs flex items-center gap-1"
+                      >
+                        <ExternalLink className="mr-1.5 h-2 w-2" />
+                        View Publication
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               ))}
             </CardContent>

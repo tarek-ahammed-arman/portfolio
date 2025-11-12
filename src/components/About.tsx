@@ -17,7 +17,9 @@ const About = () => {
         "Experienced in developing web applications with modern technologies. This foundation helps me analyze security flaws from both an attacker’s and developer’s perspective, strengthening my overall cybersecurity skill set.",
     },
     {
-      icon: <BookOpen className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />,
+      icon: (
+        <BookOpen className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
+      ),
       title: "Research and Innovation",
       description:
         "Contributed to academic research on blockchain-based identity verification, focusing on privacy, trust, and secure digital identity systems for the future.",
@@ -33,7 +35,7 @@ const About = () => {
             About Me
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             A cybersecurity-driven technologist passionate about digital
             defense, applied learning, and secure innovation.
           </p>
@@ -42,13 +44,13 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
           {/* Personal background and philosophy */}
           <div className="space-y-6 sm:space-y-8 animate-fade-up">
-            <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
               I'm a Computer Science and Engineering graduate from the
               University of Liberal Arts Bangladesh, with a strong interest in
               cybersecurity, digital forensics, and emerging security
               technologies.
             </p>
-            <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
               I actively engage in hands-on cybersecurity labs and simulations
               that sharpen my technical skills across both offensive and
               defensive domains. My technical background in programming and web
@@ -56,7 +58,7 @@ const About = () => {
               essential advantage in identifying and mitigating security
               threats.
             </p>
-            <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
               I’m continuously expanding my expertise, exploring areas like
               threat analysis, automation, and secure system design — aiming to
               contribute to safer and more resilient digital infrastructures.
@@ -82,7 +84,7 @@ const About = () => {
                 </div>
 
                 {/* Card description */}
-                              <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

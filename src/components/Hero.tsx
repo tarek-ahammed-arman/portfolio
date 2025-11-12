@@ -36,24 +36,24 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-up">
-<span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-semibold mb-4 backdrop-blur-sm border border-accent/20">
-  Cybersecurity | Research | Innovation
-</span>
+            <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-semibold mb-4 backdrop-blur-sm border border-accent/20">
+              Cybersecurity | Research | Innovation
+            </span>
 
-<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
-  Tarek Ahammed <span className="text-accent">Arman</span>
-</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
+              Tarek Ahammed <span className="text-accent">Arman</span>
+            </h1>
 
-<p className="text-base sm:text-lg md:text-lg text-primary-foreground/90 mb-4 font-medium">
-  Aspiring Cybersecurity Professional | CSE Graduate | Research Contributor
-</p>
+            <p className="text-base sm:text-lg md:text-lg text-primary-foreground/90 mb-4 font-medium">
+              Aspiring Cybersecurity Professional | CSE Graduate | Research
+              Contributor
+            </p>
 
-<p className="text-sm sm:text-base md:text-base text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
-  Exploring cybersecurity through hands-on labs, research, and practical security solutions. Actively learning offensive and defensive techniques to build real-world expertise.
-</p>
-
-
-
+            <p className="text-sm sm:text-base md:text-base text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
+              Exploring cybersecurity through hands-on labs, research, and
+              practical security solutions. Actively learning offensive and
+              defensive techniques to build real-world expertise.
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
