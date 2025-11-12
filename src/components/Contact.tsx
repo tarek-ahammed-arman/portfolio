@@ -81,11 +81,11 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20 animate-fade-up">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
             Get In Touch
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             I'm always open to discussing new opportunities, collaborations, or
             cybersecurity projects. Feel free to reach out!
           </p>
@@ -103,10 +103,10 @@ const Contact = () => {
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="p-2 sm:p-3 bg-gradient-accent rounded-xl group-hover:scale-110 transition-transform">
-                    <Icon className="h-5 sm:h-6 w-5 sm:w-6 text-accent-foreground" />
+                    <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-base sm:text-lg md:text-base">
+                    <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-sm">
                       {info.title}
                     </h3>
                     {info.href ? (
@@ -114,12 +114,12 @@ const Contact = () => {
                         href={info.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-accent transition-colors text-sm sm:text-base md:text-sm"
+                        className="text-muted-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-xs"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground text-sm sm:text-base md:text-sm">
+                      <p className="text-muted-foreground text-xs sm:text-sm md:text-xs">
                         {info.value}
                       </p>
                     )}
@@ -131,7 +131,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-card rounded-2xl shadow-card border border-border p-6 sm:p-8 animate-fade-up">
-            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-semibold text-foreground mb-6">
+            <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-semibold text-foreground mb-6">
               Send a Message
             </h3>
             <form
@@ -142,7 +142,7 @@ const Contact = () => {
                 <div key={field}>
                   <Label
                     htmlFor={field}
-                    className="text-foreground text-sm sm:text-base md:text-sm"
+                    className="text-foreground text-xs sm:text-sm md:text-xs"
                   >
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </Label>
@@ -151,7 +151,7 @@ const Contact = () => {
                     type={field === "email" ? "email" : "text"}
                     placeholder={`Your ${field}`}
                     {...register(field as keyof ContactFormData)}
-                    className="mt-1.5 text-sm sm:text-base md:text-sm"
+                    className="mt-1.5 text-xs sm:text-sm md:text-xs"
                   />
                   {errors[field as keyof ContactFormData] && (
                     <p className="text-destructive text-xs sm:text-sm mt-1">
@@ -163,7 +163,7 @@ const Contact = () => {
               <div>
                 <Label
                   htmlFor="message"
-                  className="text-foreground text-sm sm:text-base md:text-sm"
+                  className="text-foreground text-xs sm:text-sm md:text-xs"
                 >
                   Message
                 </Label>
@@ -172,7 +172,7 @@ const Contact = () => {
                   placeholder="Your message..."
                   rows={5}
                   {...register("message")}
-                  className="mt-1.5 text-sm sm:text-base md:text-sm"
+                  className="mt-1.5 text-xs sm:text-sm md:text-xs"
                 />
                 {errors.message && (
                   <p className="text-destructive text-xs sm:text-sm mt-1">
@@ -182,11 +182,11 @@ const Contact = () => {
               </div>
               <Button
                 type="submit"
-                size="lg"
-                className="w-full flex items-center justify-center gap-2 text-sm sm:text-base md:text-sm"
+                size="default"
+                className="w-full flex items-center justify-center gap-2 text-xs sm:text-sm md:text-xs"
                 disabled={isSubmitting}
               >
-                <Mail className="h-4 sm:h-5 w-4 sm:w-5" />
+                <Mail className="h-3 sm:h-4 w-3 sm:w-4" />
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>

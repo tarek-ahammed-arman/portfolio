@@ -53,7 +53,7 @@ const items: Item[] = [
     labLink: "https://tryhackme.com/path/outline/cybersecurity101",
     writeUpLink: "https://medium.com/@yourusername/cybersecurity101",
     image: "/1.png",
-    icon: <Shield className="h-7 w-7 text-accent-foreground" />,
+    icon: <Shield className="h-5 w-5 text-accent-foreground" />,
   },
   {
     type: "project",
@@ -76,7 +76,7 @@ const items: Item[] = [
     liveDemo: "",
     sourceCode:
       "https://github.com/tarek-ahammed-arman/tarek-ahammed-arman-portfolio",
-    icon: <ShoppingCart className="h-7 w-7 text-accent-foreground" />,
+    icon: <ShoppingCart className="h-5 w-5 text-accent-foreground" />,
     image: "/1.png",
   },
   {
@@ -92,7 +92,7 @@ const items: Item[] = [
     technologies: ["React", "TypeScript", "TailwindCSS", "EmailJs"],
     liveDemo: "https://tarekahammedarman.com/",
     sourceCode: "https://github.com/tarek-ahammed-arman/portfolio",
-    icon: <Layers className="h-7 w-7 text-accent-foreground" />,
+    icon: <Layers className="h-5 w-5 text-accent-foreground" />,
     image: "/1.png",
   },
 ];
@@ -122,11 +122,11 @@ const LabsAndProjects = () => {
   <div className="max-w-8xl mx-auto">
     {/* SECTION HEADER */}
     <div className="text-center mb-16 animate-fade-up">
-      <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
         Labs & Projects
       </h2>
       <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-      <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
         Browse hands-on labs and projects. Click "View More" to expand and
         explore my practical experience in cybersecurity and development.
       </p>
@@ -152,18 +152,18 @@ const LabsAndProjects = () => {
                 {item.icon}
               </div>
               <div>
-                <h3 className="text-xl sm:text-xl md:text-xl font-semibold text-foreground">
+                <h3 className="text-lg sm:text-lg md:text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>
                 {item.type === "lab" && item.platform && (
-                  <span className="text-accent font-semibold text-sm sm:text-sm">
+                  <span className="text-accent font-semibold text-xs sm:text-xs">
                     {item.platform}
                   </span>
                 )}
               </div>
             </div>
 
-            <p className="text-sm sm:text-sm md:text-sm text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-xs sm:text-xs md:text-xs text-muted-foreground mb-4 leading-relaxed">
               {item.description}
             </p>
 
@@ -178,7 +178,7 @@ const LabsAndProjects = () => {
                       {item.keyHighlights.map((kh, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {kh}
@@ -196,7 +196,7 @@ const LabsAndProjects = () => {
                       {item.skillsLearned.map((skill, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {skill}
@@ -214,7 +214,7 @@ const LabsAndProjects = () => {
                       {item.toolsUsed.map((tool, idx) => (
                         <span
                           key={idx}
-                          className="text-accent text-sm sm:text-sm md:text-sm leading-relaxed"
+                          className="text-accent text-xs sm:text-xs md:text-xs leading-relaxed"
                         >
                           {tool}
                         </span>
@@ -232,7 +232,7 @@ const LabsAndProjects = () => {
                       {item.features.map((f, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {f}
@@ -250,7 +250,7 @@ const LabsAndProjects = () => {
                       {item.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="text-accent text-sm sm:text-sm md:text-sm leading-relaxed"
+                          className="text-accent text-xs sm:text-xs md:text-xs leading-relaxed"
                         >
                           {tech}
                         </span>
@@ -269,9 +269,9 @@ const LabsAndProjects = () => {
                       <Button
                         variant="default"
                         size="sm"
-                        className="flex items-center gap-2 text-xs sm:text-sm"
+                        className="flex items-center gap-2 text-xs sm:text-xs"
                       >
-                        <ExternalLink className="h-3 w-3" /> View Lab
+                        <ExternalLink className="h-2 w-2" /> View Lab
                       </Button>
                     </a>
                   )}
@@ -284,9 +284,9 @@ const LabsAndProjects = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2 text-xs sm:text-sm"
+                        className="flex items-center gap-2 text-xs sm:text-xs"
                       >
-                        <Code2 className="h-3 w-3" /> Read Write-up
+                        <Code2 className="h-2 w-2" /> Read Write-up
                       </Button>
                     </a>
                   )}
@@ -299,9 +299,9 @@ const LabsAndProjects = () => {
                       <Button
                         variant="default"
                         size="sm"
-                        className="flex items-center gap-2 text-xs sm:text-sm"
+                        className="flex items-center gap-2 text-xs sm:text-xs"
                       >
-                        <ExternalLink className="h-3 w-3" /> View Live Demo
+                        <ExternalLink className="h-2 w-2" /> View Live Demo
                       </Button>
                     </a>
                   )}
@@ -314,9 +314,9 @@ const LabsAndProjects = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-2 text-xs sm:text-sm"
+                        className="flex items-center gap-2 text-xs sm:text-xs"
                       >
-                        <Code2 className="h-3 w-3" /> View Source Code
+                        <Code2 className="h-2 w-2" /> View Source Code
                       </Button>
                     </a>
                   )}
@@ -328,10 +328,10 @@ const LabsAndProjects = () => {
               variant="ghost"
               size="sm"
               onClick={() => toggleExpand(index)}
-              className="mt-auto flex items-center gap-2 text-xs sm:text-sm"
+              className="mt-auto flex items-center gap-2 text-xs sm:text-xs"
             >
               <ChevronDown
-                className={`h-3 w-3 transition-transform ${
+                className={`h-2 w-2 transition-transform ${
                   expandedIndex === index ? "rotate-180" : ""
                 }`}
               />
@@ -348,20 +348,20 @@ const LabsAndProjects = () => {
           <Button
             variant="default"
             size="sm"
-            className="flex items-center gap-2 text-xs sm:text-sm"
+            className="flex items-center gap-2 text-xs sm:text-xs"
             onClick={handleViewMore}
           >
-            <ChevronDown className="h-3 w-3" /> Show More
+            <ChevronDown className="h-2 w-2" /> Show More
           </Button>
         )}
         {visibleCount > 6 && (
           <Button
             variant="outline"
             size="sm"
-            className="flex items-center gap-2 text-xs sm:text-sm"
+            className="flex items-center gap-2 text-xs sm:text-xs"
             onClick={handleViewLess}
           >
-            <ChevronDown className="h-3 w-3 rotate-180" /> Show Less
+            <ChevronDown className="h-2 w-2 rotate-180" /> Show Less
           </Button>
         )}
       </div>

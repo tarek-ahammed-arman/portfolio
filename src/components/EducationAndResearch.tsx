@@ -133,18 +133,18 @@ const EducationAndResearch = () => {
                 >
                   <div className="flex flex-col flex-1">
                     <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-accent flex-shrink-0 self-start" />
-                      <h3 className="text-lg sm:text-xl md:text-xl font-semibold text-foreground mb-1">
+                      <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-accent flex-shrink-0 self-start" />
+                      <h3 className="text-base sm:text-lg md:text-lg font-semibold text-foreground mb-1">
                         {paper.title}
                       </h3>
                     </div>
 
-                    <div className="flex items-center gap-2 text-accent font-semibold mb-3 sm:mb-4 text-sm sm:text-base md:text-base">
-                      <Award className="h-4 sm:h-5 w-4 sm:w-5" />
+                    <div className="flex items-center gap-2 text-accent font-semibold mb-3 sm:mb-4 text-xs sm:text-sm md:text-sm">
+                      <Award className="h-3 sm:h-4 w-3 sm:w-4" />
                       <span>Published in {paper.publisher}</span>
                     </div>
 
-                    <p className="text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-xs sm:text-sm md:text-sm text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                       {paper.description}
                     </p>
 
@@ -152,7 +152,7 @@ const EducationAndResearch = () => {
                       {paper.highlights.map((highlight, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed"
+                          className="flex items-start gap-2 text-xs sm:text-sm md:text-sm text-muted-foreground leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                           <p>{highlight}</p>
@@ -164,7 +164,7 @@ const EducationAndResearch = () => {
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent text-sm sm:text-base md:text-sm font-medium"
+                          className="px-3 py-1 text-accent text-xs sm:text-sm md:text-xs font-medium"
                         >
                           {tag}
                         </span>
@@ -181,9 +181,9 @@ const EducationAndResearch = () => {
     <Button
       variant="outline"
       size="sm"
-      className="text-xs sm:text-sm flex items-center gap-1"
+      className="text-xs sm:text-xs flex items-center gap-1"
     >
-      <ExternalLink className="mr-1.5 h-3 w-3" />
+      <ExternalLink className="mr-1.5 h-2 w-2" />
       View Publication
     </Button>
   </a>

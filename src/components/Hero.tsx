@@ -40,34 +40,34 @@ const Hero = () => {
               Cybersecurity | Research | Innovation
             </span>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
               Tarek Ahammed <span className="text-accent">Arman</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-lg text-primary-foreground/90 mb-4 font-medium">
+            <p className="text-sm sm:text-base md:text-base text-primary-foreground/90 mb-4 font-medium">
               Aspiring Cybersecurity Professional | CSE Graduate | Research Contributor
             </p>
 
-            <p className="text-sm sm:text-base md:text-base text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
+            <p className="text-xs sm:text-sm md:text-sm text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
               Exploring cybersecurity through hands-on labs, research, and practical security solutions. Actively learning offensive and defensive techniques to build real-world expertise.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
               <Button
-                size="lg"
+                size="default"
                 variant="secondary"
                 onClick={() => scrollToSection("contact")}
-                className="group shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
+                className="group shadow-lg hover:shadow-xl transition-all text-xs sm:text-sm"
               >
-                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Get in Touch
               </Button>
               <Button
-                size="lg"
+                size="default"
                 variant="outline"
                 onClick={() => scrollToSection("labs-projects")}
-                className="bg-transparent border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-accent transition-all text-sm sm:text-base"
+                className="bg-transparent border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-accent transition-all text-xs sm:text-sm"
               >
                 Explore Labs
               </Button>
@@ -81,7 +81,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Github className="h-6 w-6 sm:h-7 sm:w-7" />
+                <Github className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/tarek-ahammed-arman/"
@@ -89,13 +89,13 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
+                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="mailto:tarek.ahammed.arman@gmail.com"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Mail className="h-6 w-6 sm:h-7 sm:w-7" />
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
             </div>
           </div>

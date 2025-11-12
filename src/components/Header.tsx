@@ -43,7 +43,7 @@ const Header = () => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground hover:text-primary transition-colors flex-shrink-0"
+          className="text-lg sm:text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors flex-shrink-0"
         >
           Tarek Ahammed Arman
         </a>
