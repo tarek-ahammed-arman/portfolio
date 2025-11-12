@@ -78,7 +78,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-12 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20 animate-fade-up">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
