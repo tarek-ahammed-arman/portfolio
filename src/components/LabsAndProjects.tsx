@@ -9,16 +9,14 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Define type of item: can be a "lab" or a "project"
 type ItemType = "lab" | "project";
 
-// Define interface for items in the section
 interface Item {
   type: ItemType;
   title: string;
   description: string;
   image: string;
-  platform?: string; // Optional: e.g., TryHackMe for labs
+  platform?: string;
   keyHighlights?: string[];
   skillsLearned?: string[];
   toolsUsed?: string[];
@@ -28,10 +26,9 @@ interface Item {
   writeUpLink?: string;
   liveDemo?: string;
   sourceCode?: string;
-  icon?: JSX.Element; // Icon representing the item
+  icon?: JSX.Element;
 }
 
-// List of labs and projects with details, highlights, and links
 const items: Item[] = [
   {
     type: "lab",
@@ -101,21 +98,16 @@ const items: Item[] = [
 ];
 
 const LabsAndProjects = () => {
-  // Track which card is expanded to show additional info
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  // Track how many items are visible initially
   const [visibleCount, setVisibleCount] = useState(6);
 
-  // Toggle expansion of a specific card
   const toggleExpand = (index: number) =>
     setExpandedIndex(expandedIndex === index ? null : index);
 
-  // Show more items globally
   const handleViewMore = () => {
     setVisibleCount((prev) => Math.min(prev + 6, items.length));
   };
 
-  // Reset to initial view and scroll to top of section
   const handleViewLess = () => {
     setVisibleCount(6);
     const section = document.getElementById("labs-projects");
@@ -130,17 +122,17 @@ const LabsAndProjects = () => {
       <div className="max-w-8xl mx-auto">
         {/* SECTION HEADER  */}
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             Labs & Projects
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             Browse hands-on labs and projects. Click "View More" to expand and
             explore my practical experience in cybersecurity and development.
           </p>
         </div>
 
-        {/*  GRID OF CARDS  */}
+        {/* GRID OF CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {items.slice(0, visibleCount).map((item, index) => (
             <div
@@ -148,7 +140,6 @@ const LabsAndProjects = () => {
               className="bg-card rounded-2xl shadow-card hover:shadow-hover transition-all border border-border overflow-hidden group flex flex-col h-full animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Card Image */}
               <img
                 src={item.image}
                 alt={item.title}
@@ -156,7 +147,6 @@ const LabsAndProjects = () => {
               />
 
               <div className="p-6 sm:p-8 flex flex-col flex-1">
-                {/*  TITLE & ICON  */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4">
                   <div className="p-3 bg-gradient-accent rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform">
                     {item.icon}
@@ -173,15 +163,12 @@ const LabsAndProjects = () => {
                   </div>
                 </div>
 
-                {/* Description */}
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-base text-muted-foreground mb-4 leading-relaxed">
                   {item.description}
                 </p>
 
-                {/*  EXPANDED CONTENT  */}
                 {expandedIndex === index && (
                   <div className="mb-4 space-y-4">
-                    {/* Labs: key highlights, skills, tools */}
                     {item.type === "lab" && item.keyHighlights && (
                       <div>
                         <h4 className="font-semibold text-foreground mb-2">
@@ -191,7 +178,7 @@ const LabsAndProjects = () => {
                           {item.keyHighlights.map((kh, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-base leading-relaxed"
                             >
                               <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                               {kh}
@@ -209,7 +196,7 @@ const LabsAndProjects = () => {
                           {item.skillsLearned.map((skill, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-base leading-relaxed"
                             >
                               <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                               {skill}
@@ -227,7 +214,7 @@ const LabsAndProjects = () => {
                           {item.toolsUsed.map((tool, idx) => (
                             <span
                               key={idx}
-                              className="text-accent text-sm sm:text-base md:text-md leading-relaxed"
+                              className="text-accent text-sm sm:text-base md:text-sm leading-relaxed"
                             >
                               {tool}
                             </span>
@@ -236,7 +223,6 @@ const LabsAndProjects = () => {
                       </div>
                     )}
 
-                    {/* Projects: features and technologies */}
                     {item.type === "project" && item.features && (
                       <div>
                         <h4 className="font-semibold text-foreground mb-2">
@@ -246,7 +232,7 @@ const LabsAndProjects = () => {
                           {item.features.map((f, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-base md:text-base leading-relaxed"
                             >
                               <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                               {f}
@@ -264,7 +250,7 @@ const LabsAndProjects = () => {
                           {item.technologies.map((tech, idx) => (
                             <span
                               key={idx}
-                              className="text-accent text-sm sm:text-base md:text-md leading-relaxed"
+                              className="text-accent text-sm sm:text-base md:text-sm leading-relaxed"
                             >
                               {tech}
                             </span>
@@ -273,7 +259,6 @@ const LabsAndProjects = () => {
                       </div>
                     )}
 
-                    {/* Links for labs or projects */}
                     <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
                       {item.type === "lab" && item.labLink && (
                         <a
@@ -335,7 +320,6 @@ const LabsAndProjects = () => {
                   </div>
                 )}
 
-                {/* Expand / Collapse Button */}
                 <Button
                   variant="ghost"
                   size="sm"
@@ -354,7 +338,6 @@ const LabsAndProjects = () => {
           ))}
         </div>
 
-        {/*  GLOBAL VIEW MORE / LESS  */}
         {items.length > 6 && (
           <div className="mt-8 flex justify-center gap-4 animate-fade-up">
             {visibleCount < items.length && (

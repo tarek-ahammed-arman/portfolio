@@ -10,7 +10,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const EducationAndResearch = () => {
-  // List of formal education entries with degrees, institutions, graduation years, and highlights
   const educationList = [
     {
       degree: "Bachelor of Science in Computer Science and Engineering (CSE)",
@@ -34,7 +33,6 @@ const EducationAndResearch = () => {
     },
   ];
 
-  // List of research publications with metadata, highlights, and tags
   const researchPapers = [
     {
       title: "A Review of Blockchain Approaches for KYC",
@@ -59,11 +57,11 @@ const EducationAndResearch = () => {
       <div className="max-w-8xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             Education & Research
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             Academic foundation and research experience shaping my technical
             expertise in computer science, cybersecurity, and emerging
             technologies.
@@ -74,38 +72,35 @@ const EducationAndResearch = () => {
           {/* Education Card */}
           <Card className="border-border bg-card hover:shadow-hover transition-all p-6 sm:p-8 rounded-2xl animate-fade-up">
             <CardHeader className="p-0 mb-6">
-              {/* Education card header with icon */}
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <GraduationCap className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
+                <CardTitle className="text-2xl sm:text-3xl md:text-3xl font-semibold text-foreground">
                   Education
                 </CardTitle>
               </div>
             </CardHeader>
 
             <CardContent className="p-0 space-y-6">
-              {/* Loop through all education entries */}
               {educationList.map((edu, idx) => (
                 <div key={idx} className="pl-4 border-l-2 border-accent/50">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
+                  <h3 className="text-lg sm:text-xl md:text-xl font-semibold text-foreground mb-1">
                     {edu.degree}
                   </h3>
-                  <p className="text-accent text-sm sm:text-base md:text-lg font-medium mb-2">
+                  <p className="text-accent text-sm sm:text-base md:text-base font-medium mb-2">
                     {edu.institution}
                   </p>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-3 text-sm sm:text-base md:text-lg">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-3 text-sm sm:text-base md:text-base">
                     <Calendar className="h-4 sm:h-5 w-4 sm:w-5" />
                     <span>Graduated {edu.graduation}</span>
                   </div>
 
-                  {/* Highlights for each education entry */}
                   <div className="space-y-2 mb-2">
                     {edu.highlights.map((highlight, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
+                        className="flex items-start gap-2 text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed"
                       >
                         <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                         <p>{highlight}</p>
@@ -120,50 +115,44 @@ const EducationAndResearch = () => {
           {/* Research Publication Cards */}
           <Card className="border-border bg-card hover:shadow-hover transition-all p-6 sm:p-8 rounded-2xl animate-fade-up">
             <CardHeader className="p-0 mb-6">
-              {/* Research card header with icon */}
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <FileText className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
+                <CardTitle className="text-2xl sm:text-3xl md:text-3xl font-semibold text-foreground">
                   Research Publication
                 </CardTitle>
               </div>
             </CardHeader>
 
             <CardContent className="p-0 space-y-6">
-              {/* Loop through research publications */}
               {researchPapers.map((paper, idx) => (
                 <div
                   key={idx}
                   className="bg-card/30 rounded-2xl border border-border p-6 sm:p-8 flex flex-col justify-between animate-fade-up"
                 >
                   <div className="flex flex-col flex-1">
-                    {/* Research title & icon */}
                     <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                       <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-accent flex-shrink-0 self-start" />
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
+                      <h3 className="text-lg sm:text-xl md:text-xl font-semibold text-foreground mb-1">
                         {paper.title}
                       </h3>
                     </div>
 
-                    {/* Publisher info */}
-                    <div className="flex items-center gap-2 text-accent font-semibold mb-3 sm:mb-4 text-sm sm:text-base md:text-lg">
+                    <div className="flex items-center gap-2 text-accent font-semibold mb-3 sm:mb-4 text-sm sm:text-base md:text-base">
                       <Award className="h-4 sm:h-5 w-4 sm:w-5" />
                       <span>Published in {paper.publisher}</span>
                     </div>
 
-                    {/* Paper description */}
-                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                       {paper.description}
                     </p>
 
-                    {/* Highlights for each publication */}
                     <div className="space-y-2 mb-3 sm:mb-4">
                       {paper.highlights.map((highlight, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
+                          className="flex items-start gap-2 text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                           <p>{highlight}</p>
@@ -171,12 +160,11 @@ const EducationAndResearch = () => {
                       ))}
                     </div>
 
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent text-sm sm:text-base md:text-md font-medium"
+                          className="px-3 py-1 text-accent text-sm sm:text-base md:text-sm font-medium"
                         >
                           {tag}
                         </span>
@@ -184,7 +172,6 @@ const EducationAndResearch = () => {
                     </div>
                   </div>
 
-                  {/* External link to publication */}
                   <div className="mt-4 text-center">
                     <a
                       href={paper.url}
@@ -194,7 +181,7 @@ const EducationAndResearch = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="text-sm sm:text-base md:text-lg"
+                        className="text-sm sm:text-base"
                       >
                         <ExternalLink className="mr-2 h-4 w-4 sm:h-4 sm:w-4" />
                         View Publication

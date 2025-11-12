@@ -12,16 +12,12 @@ import { Button } from "@/components/ui/button";
 
 // Expertise & Credentials section – showcases skills and verified certifications
 const ExpertiseAndCredentials = () => {
-  // Track which certification is expanded (for showing sub-courses)
   const [expanded, setExpanded] = useState<number | null>(null);
-  // Control how many certificates are visible at once
   const [visibleCount, setVisibleCount] = useState(4);
 
-  // Toggle expanded certificate details
   const toggleExpand = (index: number) =>
     setExpanded(expanded === index ? null : index);
 
-  // Show more / less certificates
   const handleViewMore = () => setVisibleCount((prev) => prev + 4);
   const handleViewLess = () => {
     setVisibleCount(4);
@@ -29,7 +25,6 @@ const ExpertiseAndCredentials = () => {
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Skill categories displayed with icons and lists
   const skillCategories = [
     {
       title: "Cybersecurity & Offensive Security",
@@ -64,7 +59,6 @@ const ExpertiseAndCredentials = () => {
     },
   ];
 
-  // Certification list with optional sub-courses and external links
   const certifications = [
     {
       title: "Google Cybersecurity Professional Certificate",
@@ -130,11 +124,11 @@ const ExpertiseAndCredentials = () => {
       <div className="max-w-8xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             Expertise & Credentials
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             A curated view of technical skills, hands-on experience, and
             verified certifications across cybersecurity, development, and
             applied research.
@@ -144,7 +138,7 @@ const ExpertiseAndCredentials = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
           {/* Certifications list */}
           <div className="lg:col-span-2 animate-fade-up">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6">
               Certifications
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -154,13 +148,12 @@ const ExpertiseAndCredentials = () => {
                   className="bg-card rounded-2xl shadow-card hover:shadow-hover transition-all border border-border p-6 sm:p-8 flex flex-col justify-between animate-fade-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {/* Certificate header & description */}
                   <div>
                     <div className="flex items-center gap-3 sm:gap-4 mb-4">
                       <div className="p-2 sm:p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                         <Award className="h-5 sm:h-7 w-5 sm:w-7 text-accent-foreground" />
                       </div>
-                      <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold text-foreground">
+                      <h3 className="text-lg sm:text-xl md:text-xl font-semibold text-foreground">
                         {cert.title}
                       </h3>
                     </div>
@@ -174,11 +167,10 @@ const ExpertiseAndCredentials = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed mb-4">
                       {cert.description}
                     </p>
 
-                    {/* Expandable list of sub-courses */}
                     {cert.subCourses && (
                       <div className="mb-4">
                         {expanded === index && (
@@ -186,7 +178,7 @@ const ExpertiseAndCredentials = () => {
                             <h4 className="text-sm sm:text-base font-semibold text-foreground mb-2">
                               Courses:
                             </h4>
-                            <ol className="list-decimal list-inside text-sm sm:text-base md:text-lg text-muted-foreground space-y-1 mb-3">
+                            <ol className="list-decimal list-inside text-sm sm:text-base md:text-base text-muted-foreground space-y-1 mb-3">
                               {cert.subCourses.map((course, i) => (
                                 <li key={i}>{course}</li>
                               ))}
@@ -210,7 +202,6 @@ const ExpertiseAndCredentials = () => {
                     )}
                   </div>
 
-                  {/* External certificate link */}
                   <div className="mt-4 text-center">
                     <a
                       href={cert.url}
@@ -231,7 +222,6 @@ const ExpertiseAndCredentials = () => {
               ))}
             </div>
 
-            {/* Show More / Show Less controls */}
             <div className="flex justify-center mt-6 gap-4">
               {visibleCount < certifications.length && (
                 <Button onClick={handleViewMore}>View More</Button>
@@ -246,7 +236,7 @@ const ExpertiseAndCredentials = () => {
 
           {/* Technical skills panel */}
           <div className="animate-fade-up">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6">
               Technical Skills
             </h3>
             <div className="bg-card rounded-2xl shadow-card border border-border p-6 sm:p-8 space-y-6 w-full">
@@ -254,21 +244,19 @@ const ExpertiseAndCredentials = () => {
                 const Icon = category.icon;
                 return (
                   <div key={index}>
-                    {/* Skill category header */}
                     <div className="flex items-center gap-2 sm:gap-3 mb-3">
                       <div className="p-1 sm:p-2 bg-gradient-accent rounded-full inline-flex items-center justify-center">
                         <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
                       </div>
-                      <h4 className="text-lg sm:text-xl font-semibold text-foreground">
+                      <h4 className="text-base sm:text-lg font-semibold text-foreground">
                         {category.title}
                       </h4>
                     </div>
-                    {/* Skill list */}
                     <div className="space-y-2">
                       {category.skills.map((skill, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
+                          className="flex items-start gap-2 text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                           <p className="m-0">{skill}</p>

@@ -35,7 +35,7 @@ const Header = () => {
         isScrolled ? "shadow-sm" : ""
       }`}
     >
-      <nav className="w-full flex items-center justify-between px-6 py-4 md:px-12">
+      <nav className="w-full flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
         <a
           href="#"
@@ -43,18 +43,18 @@ const Header = () => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground hover:text-primary transition-colors flex-shrink-0"
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground hover:text-primary transition-colors flex-shrink-0"
         >
           Tarek Ahammed Arman
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className="relative text-foreground hover:text-primary transition-all duration-200 transform hover:-translate-y-[1px] text-base sm:text-lg font-medium after:content-[''] after:absolute after:left-0 after:-bottom-[3px] after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-foreground hover:text-primary transition-all duration-200 transform hover:-translate-y-[1px] text-sm sm:text-base font-medium after:content-[''] after:absolute after:left-0 after:-bottom-[2px] after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.name}
             </button>
@@ -63,21 +63,21 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-md transition-colors"
+          className="md:hidden p-2 rounded-md transition-colors hover:bg-accent/10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 px-6 pb-4 animate-fade-in flex flex-col gap-3">
+        <div className="md:hidden mt-1 px-4 pb-3 animate-fade-in flex flex-col gap-2 bg-background/95 border-t border-border shadow-sm rounded-b-lg">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className="text-left text-foreground hover:text-primary transition-all duration-200 transform hover:-translate-y-[1px] text-base sm:text-lg font-medium"
+              className="text-left text-foreground hover:text-accent transition-all duration-200 transform hover:-translate-y-[1px] text-sm sm:text-base font-medium"
             >
               {item.name}
             </button>

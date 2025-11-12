@@ -17,9 +17,7 @@ const About = () => {
         "Experienced in developing web applications with modern technologies. This foundation helps me analyze security flaws from both an attacker’s and developer’s perspective, strengthening my overall cybersecurity skill set.",
     },
     {
-      icon: (
-        <BookOpen className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
-      ),
+      icon: <BookOpen className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />,
       title: "Research and Innovation",
       description:
         "Contributed to academic research on blockchain-based identity verification, focusing on privacy, trust, and secure digital identity systems for the future.",
@@ -31,11 +29,11 @@ const About = () => {
       <div className="max-w-8xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16 sm:mb-20 animate-fade-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             About Me
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             A cybersecurity-driven technologist passionate about digital
             defense, applied learning, and secure innovation.
           </p>
@@ -44,13 +42,13 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
           {/* Personal background and philosophy */}
           <div className="space-y-6 sm:space-y-8 animate-fade-up">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed">
               I'm a Computer Science and Engineering graduate from the
               University of Liberal Arts Bangladesh, with a strong interest in
               cybersecurity, digital forensics, and emerging security
               technologies.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed">
               I actively engage in hands-on cybersecurity labs and simulations
               that sharpen my technical skills across both offensive and
               defensive domains. My technical background in programming and web
@@ -58,7 +56,7 @@ const About = () => {
               essential advantage in identifying and mitigating security
               threats.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed">
               I’m continuously expanding my expertise, exploring areas like
               threat analysis, automation, and secure system design — aiming to
               contribute to safer and more resilient digital infrastructures.
@@ -78,13 +76,13 @@ const About = () => {
                   <div className="p-2 sm:p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg sm:text-2xl font-semibold text-foreground">
+                  <h3 className="text-base sm:text-xl font-semibold text-foreground">
                     {feature.title}
                   </h3>
                 </div>
 
                 {/* Card description */}
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>
