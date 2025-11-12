@@ -142,7 +142,7 @@ const Contact = () => {
                 <div key={field}>
                   <Label
                     htmlFor={field}
-                    className="text-foreground text-xs sm:text-sm md:text-xs"
+                    className="text-foreground text-xs sm:text-sm md:text-base lg:text-lg "
                   >
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </Label>
@@ -151,7 +151,7 @@ const Contact = () => {
                     type={field === "email" ? "email" : "text"}
                     placeholder={`Your ${field}`}
                     {...register(field as keyof ContactFormData)}
-                    className="mt-1.5 text-xs sm:text-sm md:text-xs"
+                    className="mt-1.5 ttext-xs sm:text-sm md:text-base lg:text-lg "
                   />
                   {errors[field as keyof ContactFormData] && (
                     <p className="text-destructive text-xs sm:text-sm mt-1">
@@ -163,7 +163,7 @@ const Contact = () => {
               <div>
                 <Label
                   htmlFor="message"
-                  className="text-foreground text-xs sm:text-sm md:text-xs"
+                  className="text-foreground text-xs sm:text-sm md:text-base lg:text-lg "
                 >
                   Message
                 </Label>
@@ -172,7 +172,7 @@ const Contact = () => {
                   placeholder="Your message..."
                   rows={5}
                   {...register("message")}
-                  className="mt-1.5 text-xs sm:text-sm md:text-xs"
+                  className="mt-1.5 text-xs sm:text-sm md:text-base lg:text-lg "
                 />
                 {errors.message && (
                   <p className="text-destructive text-xs sm:text-sm mt-1">

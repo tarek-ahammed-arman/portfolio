@@ -178,7 +178,7 @@ const ExpertiseAndCredentials = () => {
                         <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                           Courses:
                         </h4>
-                        <ol className="list-decimal list-inside text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground space-y-1 mb-3">
+                        <ol className="list-decimal list-inside text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground space-y-1 mb-3">
                           {cert.subCourses.map((course, i) => (
                             <li key={i}>{course}</li>
                           ))}
@@ -258,7 +258,7 @@ const ExpertiseAndCredentials = () => {
                   {category.skills.map((skill, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-2 text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed"
+                      className="flex items-start gap-2 text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed"
                     >
                       <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                       <p className="m-0">{skill}</p>

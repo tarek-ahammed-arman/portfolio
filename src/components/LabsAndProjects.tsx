@@ -178,7 +178,7 @@ const LabsAndProjects = () => {
                       {item.keyHighlights.map((kh, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {kh}
@@ -196,7 +196,7 @@ const LabsAndProjects = () => {
                       {item.skillsLearned.map((skill, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {skill}
@@ -214,7 +214,7 @@ const LabsAndProjects = () => {
                       {item.toolsUsed.map((tool, idx) => (
                         <span
                           key={idx}
-                          className="text-accent text-xs sm:text-xs md:text-xs leading-relaxed"
+                          className="text-accent text-xs sm:text-xs md:text-sm lg:text-base leading-relaxed"
                         >
                           {tool}
                         </span>
@@ -225,14 +225,14 @@ const LabsAndProjects = () => {
 
                 {item.type === "project" && item.features && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">
+                    <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                       Key Features:
                     </h4>
                     <ul className="space-y-1">
                       {item.features.map((f, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base  leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {f}
@@ -243,14 +243,14 @@ const LabsAndProjects = () => {
                 )}
                 {item.type === "project" && item.technologies && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">
+                    <h4 className=" text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                       Technologies Used:
                     </h4>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
                       {item.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="text-accent text-xs sm:text-xs md:text-xs leading-relaxed"
+                          className="text-accent text-xs sm:text-sm md:text-sm lg:text-base  leading-relaxed"
                         >
                           {tech}
                         </span>
