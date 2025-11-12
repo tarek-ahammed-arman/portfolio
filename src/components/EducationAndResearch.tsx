@@ -146,7 +146,7 @@ const EducationAndResearch = () => {
                       <span>Published in {paper.publisher}</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                       {paper.description}
                     </p>
 
@@ -154,7 +154,7 @@ const EducationAndResearch = () => {
                       {paper.highlights.map((highlight, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed"
+                          className="flex items-start gap-2 text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                           <p>{highlight}</p>
@@ -166,7 +166,7 @@ const EducationAndResearch = () => {
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent text-xs sm:text-sm md:text-sm lg:text-base font-medium"
+                          className="px-3 py-1 text-accent text-sm sm:text-sm md:text-sm lg:text-base font-medium"
                         >
                           {tag}
                         </span>

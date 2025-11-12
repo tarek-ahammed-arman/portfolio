@@ -126,7 +126,7 @@ const LabsAndProjects = () => {
             Labs & Projects
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             Browse hands-on labs and projects. Click "View More" to expand and
             explore my practical experience in cybersecurity and development.
           </p>
@@ -164,7 +164,7 @@ const LabsAndProjects = () => {
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground mb-4 leading-relaxed">
                   {item.description}
                 </p>
 
@@ -172,14 +172,14 @@ const LabsAndProjects = () => {
                   <div className="mb-4 space-y-4">
                     {item.type === "lab" && item.keyHighlights && (
                       <div>
-                        <h4 className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
+                        <h4 className="text-sm sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Key Highlights:
                         </h4>
                         <ul className="space-y-1">
                           {item.keyHighlights.map((kh, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm lg:text-base leading-relaxed"
                             >
                               <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                               {kh}
@@ -190,14 +190,14 @@ const LabsAndProjects = () => {
                     )}
                     {item.type === "lab" && item.skillsLearned && (
                       <div>
-                        <h4 className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
+                        <h4 className="text-sm sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Skills Learned:
                         </h4>
                         <ul className="space-y-1">
                           {item.skillsLearned.map((skill, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm lg:text-base leading-relaxed"
                             >
                               <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                               {skill}
@@ -208,14 +208,14 @@ const LabsAndProjects = () => {
                     )}
                     {item.type === "lab" && item.toolsUsed && (
                       <div>
-                        <h4 className=" text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
+                        <h4 className=" text-sm sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Tools Used:
                         </h4>
                         <div className="flex flex-wrap gap-2 sm:gap-3">
                           {item.toolsUsed.map((tool, idx) => (
                             <span
                               key={idx}
-                              className="text-accent text-xs sm:text-xs md:text-sm lg:text-base leading-relaxed"
+                              className="text-accent text-sm sm:text-xs md:text-sm lg:text-base leading-relaxed"
                             >
                               {tool}
                             </span>
@@ -226,14 +226,14 @@ const LabsAndProjects = () => {
 
                     {item.type === "project" && item.features && (
                       <div>
-                        <h4 className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
+                        <h4 className="text-sm sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Key Features:
                         </h4>
                         <ul className="space-y-1">
                           {item.features.map((f, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed"
+                              className="flex items-start gap-2 text-muted-foreground text-sm sm:text-sm md:text-sm lg:text-base leading-relaxed"
                             >
                               <span className="flex-shrink-0 mt-[0.25rem] w-2 h-2 bg-accent rounded-full"></span>
                               <span className="flex-1">{f}</span>
@@ -245,14 +245,14 @@ const LabsAndProjects = () => {
 
                     {item.type === "project" && item.technologies && (
                       <div>
-                        <h4 className=" text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
+                        <h4 className=" text-sm sm:text-sm md:text-sm lg:text-base font-semibold text-foreground mb-2">
                           Technologies Used:
                         </h4>
                         <div className="flex flex-wrap gap-2 sm:gap-3">
                           {item.technologies.map((tech, idx) => (
                             <span
                               key={idx}
-                              className="text-accent text-xs sm:text-sm md:text-sm lg:text-base  leading-relaxed"
+                              className="text-accent text-sm sm:text-sm md:text-sm lg:text-base  leading-relaxed"
                             >
                               {tech}
                             </span>

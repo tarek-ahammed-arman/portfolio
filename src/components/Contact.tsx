@@ -85,7 +85,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-sm md:text-sm lg:text-base text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
             I'm always open to discussing new opportunities, collaborations, or
             cybersecurity projects. Feel free to reach out!
           </p>
