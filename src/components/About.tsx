@@ -82,7 +82,7 @@ const About = () => {
                 </div>
 
                 {/* Card description */}
-                <p className="text-xs sm:text-sm md:text-sm text-muted-foreground leading-relaxed">
+                              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

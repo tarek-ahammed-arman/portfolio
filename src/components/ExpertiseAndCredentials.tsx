@@ -158,16 +158,16 @@ const ExpertiseAndCredentials = () => {
                   </h3>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap mb-3">
-                  <span className="text-accent font-semibold text-sm sm:text-sm">
+                  <span className="text-accent font-semibold text-xs sm:text-sm md:text-base lg:text-lg">
                     {cert.issuer}
                   </span>
                   {cert.provider && (
-                    <span className="bg-muted text-muted-foreground text-xs sm:text-xs px-2 py-0.5 rounded-full">
+                    <span className="bg-muted text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg px-2 py-0.5 rounded-full">
                       Offered by {cert.provider}
                     </span>
                   )}
                 </div>
-                <p className="text-sm sm:text-sm md:text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4">
                   {cert.description}
                 </p>
 
@@ -175,10 +175,10 @@ const ExpertiseAndCredentials = () => {
                   <div className="mb-4">
                     {expanded === index && (
                       <div>
-                        <h4 className="text-sm sm:text-sm font-semibold text-foreground mb-2">
+                        <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                           Courses:
                         </h4>
-                        <ol className="list-decimal list-inside text-xs sm:text-sm md:text-sm text-muted-foreground space-y-1 mb-3">
+                        <ol className="list-decimal list-inside text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground space-y-1 mb-3">
                           {cert.subCourses.map((course, i) => (
                             <li key={i}>{course}</li>
                           ))}
@@ -247,10 +247,10 @@ const ExpertiseAndCredentials = () => {
             return (
               <div key={index}>
                 <div className="flex items-center gap-2 sm:gap-3 mb-3">
-                  <div className="p-1 sm:p-1 bg-gradient-accent rounded-full inline-flex items-center justify-center">
-                    <Icon className="h-2 sm:h-3 w-2 sm:w-3 text-accent-foreground" />
+                  <div className="p-2 sm:p-2 bg-gradient-accent rounded-full inline-flex items-center justify-center">
+                    <Icon className="h-3 sm:h-4 w-3 sm:w-4 text-accent-foreground" />
                   </div>
-                  <h4 className="text-xs sm:text-xs font-semibold text-foreground">
+                  <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground">
                     {category.title}
                   </h4>
                 </div>
@@ -258,7 +258,7 @@ const ExpertiseAndCredentials = () => {
                   {category.skills.map((skill, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-2 text-xs sm:text-xs md:text-xs text-muted-foreground leading-relaxed"
+                      className="flex items-start gap-2 text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed"
                     >
                       <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                       <p className="m-0">{skill}</p>

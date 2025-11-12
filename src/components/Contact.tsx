@@ -106,7 +106,7 @@ const Contact = () => {
                     <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-sm sm:text-base md:text-sm">
+                    <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-base lg:text-lg">
                       {info.title}
                     </h3>
                     {info.href ? (
@@ -114,12 +114,12 @@ const Contact = () => {
                         href={info.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-xs"
+                        className="text-muted-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-base lg:text-lg"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground text-xs sm:text-sm md:text-xs">
+                      <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg">
                         {info.value}
                       </p>
                     )}

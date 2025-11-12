@@ -73,7 +73,7 @@ const EducationAndResearch = () => {
           <Card className="border-border bg-card hover:shadow-hover transition-all p-6 sm:p-8 rounded-2xl animate-fade-up">
             <CardHeader className="p-0 mb-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
+                <div className="p-2 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <GraduationCap className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
                 <CardTitle className="text-2xl sm:text-2xl md:text-2xl font-semibold text-foreground">
@@ -100,7 +100,7 @@ const EducationAndResearch = () => {
                     {edu.highlights.map((highlight, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2 text-sm sm:text-base md:text-base text-muted-foreground leading-relaxed"
+                        className="flex items-start gap-2 text-sm sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed"
                       >
                         <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                         <p>{highlight}</p>
@@ -116,7 +116,7 @@ const EducationAndResearch = () => {
           <Card className="border-border bg-card hover:shadow-hover transition-all p-6 sm:p-8 rounded-2xl animate-fade-up">
             <CardHeader className="p-0 mb-6">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
+                <div className="p-2 bg-gradient-accent rounded-xl inline-flex items-center justify-center">
                   <FileText className="h-6 sm:h-7 w-6 sm:w-7 text-accent-foreground" />
                 </div>
                 <CardTitle className="text-2xl sm:text-2xl md:text-2xl font-semibold text-foreground">
@@ -144,7 +144,7 @@ const EducationAndResearch = () => {
                       <span>Published in {paper.publisher}</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm md:text-sm text-muted-foreground leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                       {paper.description}
                     </p>
 
@@ -152,7 +152,7 @@ const EducationAndResearch = () => {
                       {paper.highlights.map((highlight, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-xs sm:text-sm md:text-sm text-muted-foreground leading-relaxed"
+                          className="flex items-start gap-2 text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
                           <p>{highlight}</p>
@@ -164,7 +164,7 @@ const EducationAndResearch = () => {
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent text-xs sm:text-sm md:text-xs font-medium"
+                          className="px-3 py-1 text-accent ttext-xs sm:text-sm md:text-base lg:text-lg font-medium"
                         >
                           {tag}
                         </span>

@@ -36,21 +36,24 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-up">
-            <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm sm:text-base font-semibold mb-4 backdrop-blur-sm border border-accent/20">
-              Cybersecurity | Research | Innovation
-            </span>
+<span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-semibold mb-4 backdrop-blur-sm border border-accent/20">
+  Cybersecurity | Research | Innovation
+</span>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
-              Tarek Ahammed <span className="text-accent">Arman</span>
-            </h1>
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-4 leading-tight tracking-tight">
+  Tarek Ahammed <span className="text-accent">Arman</span>
+</h1>
 
-            <p className="text-sm sm:text-base md:text-base text-primary-foreground/90 mb-4 font-medium">
-              Aspiring Cybersecurity Professional | CSE Graduate | Research Contributor
-            </p>
+<p className="text-base sm:text-lg md:text-lg text-primary-foreground/90 mb-4 font-medium">
+  Aspiring Cybersecurity Professional | CSE Graduate | Research Contributor
+</p>
 
-            <p className="text-xs sm:text-sm md:text-sm text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
-              Exploring cybersecurity through hands-on labs, research, and practical security solutions. Actively learning offensive and defensive techniques to build real-world expertise.
-            </p>
+<p className="text-sm sm:text-base md:text-base text-primary-foreground/70 mb-8 leading-relaxed max-w-full lg:max-w-none">
+  Exploring cybersecurity through hands-on labs, research, and practical security solutions. Actively learning offensive and defensive techniques to build real-world expertise.
+</p>
+
+
+
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
@@ -81,7 +84,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Github className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Github className="h-6 w-6 sm:h-7 sm:w-7" />
               </a>
               <a
                 href="https://www.linkedin.com/in/tarek-ahammed-arman/"
@@ -89,13 +92,13 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
               </a>
               <a
                 href="mailto:tarek.ahammed.arman@gmail.com"
                 className="text-primary-foreground/70 hover:text-accent transition-all hover:scale-110 transform"
               >
-                <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Mail className="h-6 w-6 sm:h-7 sm:w-7" />
               </a>
             </div>
           </div>

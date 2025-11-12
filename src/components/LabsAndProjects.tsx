@@ -163,7 +163,7 @@ const LabsAndProjects = () => {
               </div>
             </div>
 
-            <p className="text-xs sm:text-xs md:text-xs text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-4 leading-relaxed">
               {item.description}
             </p>
 
@@ -171,14 +171,14 @@ const LabsAndProjects = () => {
               <div className="mb-4 space-y-4">
                 {item.type === "lab" && item.keyHighlights && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">
+                    <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                       Key Highlights:
                     </h4>
                     <ul className="space-y-1">
                       {item.keyHighlights.map((kh, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {kh}
@@ -189,14 +189,14 @@ const LabsAndProjects = () => {
                 )}
                 {item.type === "lab" && item.skillsLearned && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">
+                    <h4 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                       Skills Learned:
                     </h4>
                     <ul className="space-y-1">
                       {item.skillsLearned.map((skill, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-xs md:text-xs leading-relaxed"
+                          className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
                         >
                           <span className="w-2 h-2 bg-accent rounded-full mt-2"></span>
                           {skill}
@@ -207,7 +207,7 @@ const LabsAndProjects = () => {
                 )}
                 {item.type === "lab" && item.toolsUsed && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">
+                    <h4 className=" text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-foreground mb-2">
                       Tools Used:
                     </h4>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
