@@ -106,7 +106,7 @@ const Contact = () => {
                     <Icon className="h-4 sm:h-5 w-4 sm:w-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-sm lg:text-base">
+                    <h3 className="font-semibold text-foreground text-xs sm:text-sm md:text-sm lg:text-sm">
                       {info.title}
                     </h3>
                     {info.href ? (
@@ -114,12 +114,12 @@ const Contact = () => {
                         href={info.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-base lg:text-lg"
+                        className="text-muted-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-sm lg:text-sm"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-base">
+                      <p className="text-muted-foreground text-xs sm:text-sm md:text-sm lg:text-sm">
                         {info.value}
                       </p>
                     )}
@@ -142,7 +142,7 @@ const Contact = () => {
                 <div key={field}>
                   <Label
                     htmlFor={field}
-                    className="text-foreground text-xs sm:text-sm md:text-sm lg:text-base "
+                    className="text-foreground text-xs sm:text-sm md:text-sm lg:text-sm "
                   >
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </Label>
@@ -151,7 +151,7 @@ const Contact = () => {
                     type={field === "email" ? "email" : "text"}
                     placeholder={`Your ${field}`}
                     {...register(field as keyof ContactFormData)}
-                    className="mt-1.5 ttext-xs sm:text-sm md:text-sm lg:text-base "
+                    className="mt-1.5 ttext-xs sm:text-sm md:text-sm lg:text-sm "
                   />
                   {errors[field as keyof ContactFormData] && (
                     <p className="text-destructive text-xs sm:text-sm mt-1">
@@ -163,7 +163,7 @@ const Contact = () => {
               <div>
                 <Label
                   htmlFor="message"
-                  className="text-foreground text-xs sm:text-sm md:text-sm lg:text-base "
+                  className="text-foreground text-xs sm:text-sm md:text-sm lg:text-sm "
                 >
                   Message
                 </Label>
@@ -172,7 +172,7 @@ const Contact = () => {
                   placeholder="Your message..."
                   rows={5}
                   {...register("message")}
-                  className="mt-1.5 text-xs sm:text-sm md:text-sm lg:text-base "
+                  className="mt-1.5 text-xs sm:text-sm md:text-sm lg:text-sm "
                 />
                 {errors.message && (
                   <p className="text-destructive text-xs sm:text-sm mt-1">
