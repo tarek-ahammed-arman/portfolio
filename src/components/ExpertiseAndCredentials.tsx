@@ -197,7 +197,7 @@ const ExpertiseAndCredentials = () => {
                           variant="ghost"
                           size="sm"
                           onClick={() => toggleExpand(index)}
-                          className="flex items-center gap-1 text-sm"
+                          className="flex items-center gap-1 text-xs sm:text-xs"
                         >
                           <ChevronDown
                             className={`h-4 w-4 transition-transform ${
@@ -220,7 +220,7 @@ const ExpertiseAndCredentials = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex items-center gap-1 text-sm"
+                        className="flex items-center gap-1 text-xs sm:text-xs"
                       >
                         <ExternalLink className="h-4 w-4" />
                         View Certificate

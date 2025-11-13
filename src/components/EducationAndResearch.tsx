@@ -166,7 +166,7 @@ const EducationAndResearch = () => {
                       {paper.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-accent text-sm sm:text-sm md:text-sm lg:text-base font-medium"
+                          className="text-accent text-sm sm:text-sm md:text-sm lg:text-base  leading-relaxed"
                         >
                           {tag}
                         </span>
